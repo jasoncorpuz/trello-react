@@ -18,16 +18,29 @@ export default function List(props) { //function component
             key={card.id}
             title={card.title}
             content={card.content}
+            id={card.id}
           />
         )}
         
         <button
           type='button'
           className='List-add-button'
+          onClick={() => props.handleButtonAdd(props.id)}
         >
           + Add Random Card
+        </button>
+        <button
+          type='button'
+          className='List-delete-button'
+          onClick={props.handleButtonDelete}
+        >
+          - Delete Card
         </button>
       </div>
     </section>
   )
+}
+
+List.defaultProps = {
+  onClickAdd: () => {},
 }

@@ -35,7 +35,7 @@
     overflow: auto;
   }
   
-  .List-add-button {
+  .List-add-button, .List-delete-button {
     background: none;
     border: none;
     font-size: 12px;
